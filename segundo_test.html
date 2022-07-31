@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<h3> Edades de alumnos</h3>
+Basadas en el año 2022.
+<br>
+<br>
+
+
+<script>
+
+	function saltarlinea(){
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase){
+		document.write(frase)
+		saltarlinea();
+	}
+
+	var year=2025;
+	var saltolinea="<br><br>"
+
+	//Esta parte del código calcula las edades de Edgar, Betty y Agus
+	imprimir("....................................");
+
+	imprimir("Edgar tiene "+(year-2002)+" años.");  
+	
+	imprimir("Betty tiene "+(year-1997)+ " años.");
+
+	imprimir("Agus tiene "+(year-1987)+" años.");
+
+	
+imprimir("....................................");
+	
+	
+	//Se calcula las edades de Silvia y Claudia, para posteriormente obtener su promedio
+
+
+	var year=2022;
+
+	imprimir("Silvia tiene "+(year-1986)+" años.");
+
+	imprimir("Claudia tiene "+(year-2000)+ " años.");
+
+
+	var edadSil=36;
+	var edadClau=21;
+	var nome1="Silvia";
+	var nome2="Claudia";
+
+	var prom=(edadClau+edadSil)/2
+
+	imprimir("El promedio de las edades de: "+  nome1 + " y "+ nome2+ " es: "+ Math.round(prom));	
+	
+
+</script>

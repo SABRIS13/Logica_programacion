@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1> PROGRAMA: IMC</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularimc(peso,altura){
+
+        return peso/(altura*altura)
+
+    }
+
+    // pesoSab=54 y alturaSab=1.64
+    
+    var imcSab=calcularimc(54,1.64)
+
+    // pesoFelipe=73 y alturaFelipe=1.79
+
+    var imcFelipe=calcularimc(73,1.79)
+
+
+    imprimir("El promedio del imc calculado de Sabrina y Felipe es: "+(imcFelipe+imcSab)/2);
+    imprimir("El promedio del imc calculado de Sabrina y Felipe es: "+(calcularimc(54,1.64)+calcularimc(73,1.79))/2);
+
+
+
+
+
+</script>
