@@ -23,20 +23,14 @@
 
     }
 
+    nombre= prompt("Informe su nombre: ")
 
-    
-
-    // pesoSab=54 y alturaSab=1.64
-    
-    var imcSab=calcularimc(54,1.64)
-
-    // pesoFelipe=73 y alturaFelipe=1.79
-
-    var imcFelipe=calcularimc(73,1.79)
+    peso=prompt("Informe su peso: ")
+    altura=prompt("Informe su altura: ")
+    imcCalculado= calcularimc(peso, altura)
 
 
-    imprimir("El promedio del imc calculado de Sabrina y Felipe es: "+(imcFelipe+imcSab)/2);
-    imprimir("El promedio del imc calculado de Sabrina y Felipe es: "+(calcularimc(54,1.64)+calcularimc(73,1.79))/2);
+    imprimir("El IMC de " + nombre + "  es de: "+imcCalculado);
 
 
 
