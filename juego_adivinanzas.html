@@ -8,8 +8,6 @@
 
     function saltarLinea() {
         document.write("<br>");
-        document.write("<br>");
-        document.write("<br>");
     }
 
     function imprimir(frase) {
@@ -23,25 +21,36 @@
 
     var rango=parseInt(prompt("Ingrese hasta que número se realizará el sorteo: "));
     var numPensado=sortea(rango);
-    var numLanzado=parseInt(prompt("Ingrese un número entre el 0 y el " + rango+"."));
+    var intentos=3;
+    var contador=1;
 
-    if (numLanzado>rango){
-        imprimir("Número ingresado fuera del rango establecido.");
-    }
+    while (contador<=intentos){
 
-    else{
+        var numLanzado=parseInt(prompt("Ingrese un número entre el 0 y el " + rango+"."));
+
         if (numLanzado==numPensado){
-            imprimir("Usted acertó.");
-        }
-
+            alert("Usted acertó");
+            break;
+            }
+        
         else{
             if (numLanzado<numPensado){
-                imprimir("Usted erró, el número sorteado era mayor.");
+                alert("Usted erró, el número sorteado era mayor.");
             }
             else {
-            imprimir("Usted erró, el número sorteado era menor.")
+                alert("Usted erró, el número sorteado era menor.")
             }
-        }   
+        }  
+
+        contador++;    
     }
+
+    if (numLanzado==numPensado){
+        imprimir("Usted acertó, en el intento "+contador+" el número pensado era "+numPensado +".");
+    }
+    else {
+        imprimir("Usted erró, el número pensado era "+numPensado+".");
+    }
+    imprimir("Fin");
 
 </script>
