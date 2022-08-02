@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h2> PROGRAMA:</h2>
+
+<h3> Tablas de multiplicar.</h3>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var tabla=parseInt(prompt("Ingrese la tabla que desea obtener: "));
+
+    var multiplicador=1;
+
+    imprimir("WHILE");
+imprimir("");
+    while(multiplicador<=10){
+        imprimir(tabla+ "*" +multiplicador+"="+(tabla*multiplicador));
+        multiplicador++
+    }
+
+    imprimir("");
+    imprimir("FOR");
+    imprimir("");
+
+    for(multiplicador=1; multiplicador<=10;multiplicador+=1){
+        imprimir(tabla+ "*" +multiplicador+"="+(tabla*multiplicador));
+    }
+
+
+
+
+</script>

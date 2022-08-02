@@ -2,7 +2,7 @@
 
 <h2> PROGRAMA:</h2>
 
-<h3> Adivinanza de números.</h3>
+<h3> Adivinanza en un sorteo de números.</h3>
 
 <script>
 
@@ -17,16 +17,31 @@
         saltarLinea();
     }
 
-    var numPensado=Math.round(Math.random()*10);
-    var numLanzado=parseInt(prompt("Ingrese un número entre 0-10: "));
+    function sortea(n){
+        return Math.round(Math.random()*n);
+    }
 
-    if (numLanzado==numPensado){
-        imprimir("Usted acertó. ")
+    var rango=parseInt(prompt("Ingrese hasta que número se realizará el sorteo: "));
+    var numPensado=sortea(rango);
+    var numLanzado=parseInt(prompt("Ingrese un número entre el 0 y el " + rango+"."));
+
+    if (numLanzado>rango){
+        imprimir("Número ingresado fuera del rango establecido.");
     }
 
     else{
-        imprimir("Usted erró, el número pensado era: " + numPensado)
-    }
+        if (numLanzado==numPensado){
+            imprimir("Usted acertó.");
+        }
 
+        else{
+            if (numLanzado<numPensado){
+                imprimir("Usted erró, el número sorteado era mayor.");
+            }
+            else {
+            imprimir("Usted erró, el número sorteado era menor.")
+            }
+        }   
+    }
 
 </script>
