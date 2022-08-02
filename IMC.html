@@ -7,8 +7,6 @@
     function saltarLinea() {
         document.write("<br>");
         document.write("<br>");
-        document.write("<hr>");
-        document.write("<br>");
         document.write("<br>");
     }
 
@@ -23,16 +21,31 @@
 
     }
 
-    nombre= prompt("Informe su nombre: ")
-
-    peso=prompt("Informe su peso: ")
-    altura=prompt("Informe su altura: ")
-    imcCalculado= calcularimc(peso, altura)
+    nombre= prompt("Informe su nombre: ");
+;
+    peso=prompt("Informe su peso: ");
+    altura=prompt("Informe su altura: ");
+    imcCalculado= calcularimc(peso, altura);
 
 
     imprimir("El IMC de " + nombre + "  es de: "+imcCalculado);
 
+    if (imcCalculado<18.5){
+        imprimir("IMC abajo de lo recomendado");
+    }
 
+
+    if (imcCalculado>=18.5 && imcCalculado<25 ){
+        imprimir("IMC considerado como normal.");
+    }
+
+    if (imcCalculado>=25 && imcCalculado<30){
+        imprimir("IMC considerado como sobrepeso.");
+    }
+
+    if (imcCalculado>=30){
+        imprimir("IMC considero como obesidad.");
+    }
 
 
 
