@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h2> PROGRAMA:</h2>
+
+<h3> Adivinanza en un sorteo de números.</h3>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    for(var lineas=1;lineas<=3;lineas++){
+
+        for(var columnas=1; columnas<=10;columnas++){
+            document.write("*");
+        }
+    saltarLinea();    
+    }
+
+    saltarLinea();
+    saltarLinea();
+
+    imprimir("Fin");
+
+</script>
