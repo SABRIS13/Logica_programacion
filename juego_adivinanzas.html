@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h2> PROGRAMA:</h2>
+
+<h3> Adivinanza de números.</h3>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numPensado=Math.round(Math.random()*10);
+    var numLanzado=parseInt(prompt("Ingrese un número entre 0-10: "));
+
+    if (numLanzado==numPensado){
+        imprimir("Usted acertó. ")
+    }
+
+    else{
+        imprimir("Usted erró, el número pensado era: " + numPensado)
+    }
+
+
+</script>
