@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<h2>Mostrar texto escrito</h2>
+Escribe el texto secreto.
+<br>
+<br>
+
+<input/>
+<button>Mostrar texto escrito</button>
+
+<script>
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+    input.focus();
+
+    function mostrarTexto() {
+
+        alert(input.value);
+        input.value="";
+        input.focus();
+    }
+
+    
+    button.onclick = mostrarTexto;
+</script>

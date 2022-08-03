@@ -35,35 +35,30 @@ Ingrese número entre cero y el límite establecido.
 
     function verificar(){
 
-        var intentos=3;
-        var contador=1;
 
-        while (contador<=intentos){
+        var numLanzado=document.querySelector('input[name="numLanzado"]');
+        numLanzado.focus();
 
-            var numLanzado=document.querySelector('input[name="numLanzado"]');
-
-            if (parseInt(numLanzado.value)==numPensado){
-                alert("Usted acertó");
-                return numLanzado;
-            }
-                
-            else{
-                
-                if (parseInt(numLanzado.value)<numPensado){
-                    alert("Usted erró, el número sorteado era mayor.");
-                }
-                else {
-                    alert("Usted erró, el número sorteado era menor.")
-                }
-            }
-
-            numLanzado.value=" ";
-            numLanzado.focus();
-            contador++; 
-
+        if (parseInt(numLanzado.value)==numPensado){
+            alert("Usted acertó");
+            imprimir("Fin del juego");
         }
-        imprimir("Fin de la partida");
+                
+        else{
+                
+            if (parseInt(numLanzado.value)<numPensado){
+                alert("Usted erró, el número sorteado era mayor.");
+            }
+            else {
+                alert("Usted erró, el número sorteado era menor.")
+            }
+        }
+
+        numLanzado.value=" ";
+        numLanzado.focus();
+
     }
+
 
     var button=document.querySelector('button[name="rango"]');
     button.onclick=sortear;
